@@ -67,7 +67,7 @@ test:
 # Instead, provide the password or a full connection URL as an environment
 # variable when you boot the app. For example:
 #
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+DATABASE_URL="postgresql://backend_20ii_user:fCuk0sgi7UjeTGIK7lX64P2Dhfp55M57@dpg-d1pqsqidbo4c73brcus0-a/backend_20ii"
 #
 # If the connection URL is provided in the special DATABASE_URL environment
 # variable, Rails will automatically merge its configuration values on top of
@@ -82,6 +82,9 @@ test:
 #
 production:
   <<: *default
-  database: ecommerce_backend_production
-  username: ecommerce_backend
-  password: <%= ENV["ECOMMERCE_BACKEND_DATABASE_PASSWORD"] %>
+  # database: ecommerce_backend_production
+  # username: ecommerce_backend
+  # password: <%= ENV["ECOMMERCE_BACKEND_DATABASE_PASSWORD"] %>
+  database: backend_20ii
+  username: backend_20ii_user
+  password: fCuk0sgi7UjeTGIK7lX64P2Dhfp55M57
