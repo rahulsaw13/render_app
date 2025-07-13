@@ -1,0 +1,16 @@
+<!-- Models -->
+
+rails g model Category name:string description:string status:integer
+rails g model SubCategory name:string description:string status:integer category:references
+rails g model Product name:string description:string status:integer price:decimal sub_category:references
+rails g model Address flat_no:string landmark:string city:string state:string zip_code:integer country:string user:references
+- rails g model Order user:references total_price:decimal payment_status:string shipping_address:references billing_address:string order_status:string 
+- rails g model OrderHistory order:references status:string status_changed_at:datetime changed_by:integer 
+rails g model PaymentTransaction order:references payment_method:string amount:decimal transaction_status:string
+- rails g model User name:string email:string password:string phone_number:string
+rails g model UserOtp user:references otp_code:integer expires_at:datetime is_used:integer
+rails g model Inventory product:references stock_quantity:integer
+rails g model Coupon code:string discount_type:integer discount_value:decimal valid_from:datetime valid_until:datetime
+rails g model ProductReview product:references user:references rating:integer review_text:string
+rails g model Notification notification_text:string is_show:integer
+rails g migration AddNameAndPhoneNumberToUsers name:string phone_number:string
